@@ -58,17 +58,17 @@ myDate.textContent = new Date().toISOString()
 // returns 2021-06-13T04:56:57.694Z
 ```
 
-You can also visit the Mozilla Docs for all the different formats.
+Visit the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) to learn more about JavaScript Dates.
 
 #### But how do I display a ticking clock with the current date and time?
 
 One possible solution would be JavaScript's `setInterval()` method. If you write a function that displays the current time, and run it every 1 second (or 1000 ms), then you've got a "ticking clock" on your web page.
 
 ```js
-var myClock = document.getElementById('myClock');
+var myClockElement = document.getElementById('myClock');
 
 function ticking() {
-    myClock.textContent = new Date().toLocaleString();
+    myClockElement.textContent = new Date().toLocaleString();
 }
 
 setInterval(ticking, 1000);
