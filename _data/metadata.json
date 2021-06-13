@@ -3,7 +3,6 @@
   "url": "https://simonpost.com/",
   "language": "en",
   "description": "Hoosier turned Ahjushii - everyday life in Korea.",
-  "rootUrl" : "http://localhost/",
   "feed": {
     "subtitle": "Life in Korea - minus the Kpop, plastic surgeries, and perfection-obsession.",
     "filename": "feed.xml",

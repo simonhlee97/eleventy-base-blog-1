@@ -28,7 +28,18 @@
     <footer class="footer">
         <p style='letter-spacing:7px;'>- - - - - -</p>
         <code>&copy; 2021 simonpost.com</code>
+        <p id='clock'></p>
     </footer>
+
+    <script type="text/javascript">
+            var clockElement = document.getElementById('clock');
+        
+            function clock() {
+                clockElement.textContent = new Date().toLocaleString();
+            }
+        
+            setInterval(clock, 1000);
+        </script>
 
 
   </body>
