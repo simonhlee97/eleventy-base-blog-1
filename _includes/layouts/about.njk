@@ -2,33 +2,11 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
-
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-{%- for tag in tags | filterTagList -%}
-{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{%- endfor %}
+<h1>{{ title }} Me</h1>
 
 {{ content | safe }}
 
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-{%- if nextPost or previousPost %}
+<br/>
+<br/>
+<br/>
 
-<br />
-<br />
-
-<hr class='postline' />
-
-<div class='next-previous-links'>
-  {%- if previousPost %}<a class='nxtlink' href="{{ previousPost.url | url }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 12l18-12v24z"/></svg></a>{% endif %}
-  {%- if nextPost %}<a class='nxtlink' href="{{ nextPost.url | url }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg></a>{% endif %}
-</div>
-{%- endif %}
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
